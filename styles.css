@@ -871,6 +871,10 @@ footer {
         padding: 0 20px;
     }
 
+    .hero h2 {
+        padding-top: 20px; /* Add padding to the top of the h2 element */
+    }
+
     /* Adjust icon sizes */
     .icon {
         flex-basis: 100%;
@@ -914,4 +918,3 @@ footer {
         text-align: left;
     }
 }
-
