@@ -842,25 +842,76 @@ footer {
 
 /* For screens smaller than 576px (phones) */
 @media (max-width: 576px) {
+    /* Ensure content does not overlap in the header */
+    header {
+        padding: 10px 20px;
+    }
+
+    header .container {
+        width: 100%;
+        text-align: center;
+    }
+
+    header .header-middle ul {
+        margin-top: 10px;
+    }
+
+    header .header-right {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    header .header-right .btn {
+        margin-top: 10px;
+    }
+
+    /* Adjust hero section for better readability */
     .hero p {
         padding: 0 20px;
     }
 
+    /* Adjust icon sizes */
     .icon {
-        flex-basis: calc(50% - 20px);
-        max-width: calc(50% - 20px);
+        flex-basis: 100%;
+        max-width: 100%;
+        margin: 10px 0;
     }
 
     .icon img {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
     }
 
     .icon p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
+    /* Hide bullet points on smaller screens */
     .problems-solved ul li::before {
         display: none;
     }
+
+    .problems-solved ul li {
+        padding-left: 0;
+    }
+
+    /* Footer responsiveness */
+    footer .footer-content {
+        flex-direction: column;
+    }
+
+    footer .about,
+    footer .contact,
+    footer .follow {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    footer .contact ul,
+    footer .follow ul {
+        padding: 0;
+        text-align: left;
+    }
 }
+
