@@ -1,0 +1,866 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px; /* Padding top 20px, bottom 10px */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    opacity: 1; /* Initially visible */
+}
+
+header.hidden {
+    opacity: 0; /* Hidden */
+}
+
+
+
+
+header .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-left h1 {
+    font-size: 24px;
+    color: #007BFF;
+    margin: 0;
+}
+
+header .header-middle ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header .header-middle li {
+    margin: 0 15px;
+}
+
+header .header-middle a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+header .header-middle a:hover {
+    color: #007BFF;
+}
+
+header .header-right a {
+    text-decoration: none;
+    color: #333;
+}
+
+header .header-right .btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+header .header-right .btn:hover {
+    background-color: #0056b3;
+}
+
+/* styles.css */
+/* Hero Section */
+.hero {
+    background-image: url('hero-background.jpg'); /* Replace 'hero-background.jpg' with your actual image */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Key Problems Solved Section */
+.problems-solved {
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Light background color to distinguish the section */
+    text-align: center;
+}
+
+.problems-solved h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.problems-solved ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px; /* Center and constrain the width of the content */
+}
+
+.problems-solved ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #555;
+    text-align: left; /* Align text to the left */
+    padding-left: 20px; /* Add some padding to the left */
+    position: relative;
+}
+
+.problems-solved ul li::before {
+    content: "\2022"; /* Unicode for bullet point */
+    color: #007BFF; /* Color of the bullet point */
+    font-weight: bold;
+    display: inline-block;
+    width: 20px; /* Width of the bullet point */
+    margin-left: -20px; /* Position the bullet point outside the padding */
+}
+
+
+/* Key Metrics Section */
+.key-metrics {
+    padding: 50px 20px;
+    background-color: #fff; /* White background for contrast */
+    text-align: center;
+}
+
+.key-metrics h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.icon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon {
+    flex: 1 1 calc(25% - 20px); /* Responsive flex item taking up approximately 25% of the container */
+    max-width: calc(25% - 20px); /* Ensure the max width doesn't exceed 25% of the container */
+    background-color: #f9f9f9; /* Light background for each icon container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.icon img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.icon p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+
+/* Reviews Section */
+.reviews {
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Light background color */
+    text-align: center;
+}
+
+.reviews h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.review {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.review p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.review span {
+    display: block;
+    font-size: 14px;
+    font-style: italic;
+    color: #777;
+    text-align: right;
+}
+
+
+/* Problem Target Section */
+.problem-target {
+    padding: 50px 20px;
+    background-color: #fff; /* White background for contrast */
+    text-align: center;
+}
+
+.problem-target h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.tab:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.tab.active {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+/* CTA Section */
+.cta {
+    background-color: #007BFF; /* Primary color background */
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.cta h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.cta .btn {
+    background-color: #fff;
+    color: #007BFF;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta .btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Light blue-grey background */
+    color: #333;
+}
+
+/* Adjusting other styles to blend with the new background */
+header {
+    background-color: #fff;
+}
+
+
+
+footer {
+    background-color: #333;
+}
+
+/* Full CSS with Gradient Background */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Purple to blue gradient */
+    color: #333;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+header.hidden {
+    opacity: 0;
+}
+
+header .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-left h1 {
+    font-size: 24px;
+    color: #007BFF;
+    margin: 0;
+}
+
+header .header-middle ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header .header-middle li {
+    margin: 0 15px;
+}
+
+header .header-middle a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+header .header-middle a:hover {
+    color: #007BFF;
+}
+
+header .header-right a {
+    text-decoration: none;
+    color: #333;
+}
+
+header .header-right .btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+header .header-right .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Key Problems Solved Section */
+.problems-solved {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.problems-solved h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.problems-solved ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.problems-solved ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #555;
+    text-align: left;
+    padding-left: 20px;
+    position: relative;
+}
+
+.problems-solved ul li::before {
+    content: "\2022";
+    color: #007BFF;
+    font-weight: bold;
+    display: inline-block;
+    width: 20px;
+    margin-left: -20px;
+}
+
+/* Key Metrics Section */
+.key-metrics {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.key-metrics h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.icon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: translateY(-5px);
+}
+
+.icon img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.icon p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+/* Reviews Section */
+.reviews {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.reviews h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.review {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.review p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.review span {
+    display: block;
+    font-size: 14px;
+    font-style: italic;
+    color: #777;
+    text-align: right;
+}
+
+/* Problem Target Section */
+.problem-target {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.problem-target h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.tab:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.tab.active {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* CTA Section */
+.cta {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.cta h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.cta .btn {
+    background-color: #fff;
+    color: #007BFF;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta .btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    color: #aaa;
+}
+
+footer .company-info {
+    margin-bottom: 10px;
+}
+
+footer .address {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.icon img {
+    width: 100px; /* Increase image size */
+    height: 100px; /* Increase image size */
+    margin-bottom: 10px;
+    border-radius: 50%; /* Make image borders curved */
+}
+
+
+/* CSS */
+.hero p {
+    padding: 0 150px; /* Add padding to the left and right */
+    line-height: 1.8; /* Increase line spacing */
+    text-align: center; /* Center the paragraph content */
+}
+
+/* CSS */
+.icon {
+    text-align: center; /* Center-align the content */
+    padding: 20px; /* Add padding to the icons */
+}
+
+.icon p {
+    margin-top: 10px; /* Add spacing between the icon and the paragraph */
+    text-align: justify;
+}
+
+/* CSS */
+.problems-solved {
+    padding: 20px;
+}
+
+.problems-solved ul {
+    list-style: none;
+    padding: 0;
+}
+
+.problems-solved li {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.problems-solved li:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.problems-solved img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.problems-solved figcaption {
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.get-started-btn {
+    text-align: center;
+    padding-top: 30px;
+}
+
+#getStartedBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#getStartedBtn:hover {
+    background-color: #0056b3;
+}
+
+
+footer {
+    background-color: #f2f2f2;
+    padding: 40px 0;
+    text-align: center;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about,
+.contact,
+.follow {
+    flex: 1;
+}
+
+.about h4,
+.contact h4,
+.follow h4 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact ul,
+.follow ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact ul li,
+.follow ul li {
+    margin-bottom: 10px;
+    color: #555; /* Changed color for contact information */
+}
+
+.follow ul li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.follow ul li a:hover {
+    color: #0056b3;
+}
+
+
+.icon {
+    background-color: #fff4f4; /* Very light pinkish background color */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px;
+}
+
+.icon h4 {
+    margin-top: 0; /* Remove default margin */
+}
+
+.icon p {
+    margin-bottom: 0; /* Remove default margin */
+}
+
+
+/* Responsive CSS */
+
+/* For screens smaller than 768px (tablets and phones) */
+@media (max-width: 768px) {
+    /* Header responsiveness */
+    header .container {
+        flex-direction: column;
+    }
+
+    header .header-middle ul {
+        margin-top: 10px;
+    }
+
+    header .header-right {
+        margin-top: 10px;
+    }
+
+    header .header-right .btn {
+        margin-top: 10px;
+    }
+}
+
+/* For screens smaller than 576px (phones) */
+@media (max-width: 576px) {
+    .hero p {
+        padding: 0 20px;
+    }
+
+    .icon {
+        flex-basis: calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+
+    .icon img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon p {
+        font-size: 14px;
+    }
+
+    .problems-solved ul li::before {
+        display: none;
+    }
+}
